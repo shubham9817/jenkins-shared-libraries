@@ -1,9 +1,9 @@
 
 
-def call(String credentials){
+def call(){
     echo 'pushing the image to dockerhub'
     withCredentials([usernamePassword(
-      credentialID: ${credentials}, 
+      credentialID: 'dockerhub-cred',
       passwordVariable: 'dockerHubPass', 
       usernameVariable: 'dockerHubUser')])
                     
